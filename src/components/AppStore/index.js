@@ -333,40 +333,39 @@ class AppStore extends Component {
 
     return (
       <div className="main">
-        <ul className="main-card">
-          <li>
-            <h1>App Store</h1>
+        <div className="main-card">
+          <h1>App Store</h1>
 
-            <li className="row">
-              <input type="search" onChange={this.search} />
-              <img
-                className="search-icon"
-                src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png "
-                alt="search icon"
-              />
-            </li>
+          <div className="row">
+            <input type="search" onChange={this.search} />
+            <img
+              className="search-icon"
+              src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png "
+              alt="search icon"
+            />
+          </div>
 
-            <li className="row">
-              <ul className="row">
-                {tabsList.map(each => (
-                  <TabItem
-                    details={each}
-                    key={each.tabId}
-                    triggerAction={this.change}
-                    activateId={tabId}
-                  />
-                ))}
-              </ul>
-            </li>
-            <li className="item-container-card">
-              <ul className="row">
-                {searchList.map(each => (
-                  <AppItem details={each} key={each.appId} />
-                ))}
-              </ul>
-            </li>
-          </li>
-        </ul>
+          <div className="row">
+            <ul className="row">
+              {tabsList.map(each => (
+                <TabItem
+                  details={each}
+                  key={each.tabId}
+                  triggerAction={this.change}
+                  activateId={tabId}
+                />
+              ))}
+            </ul>
+          </div>
+
+          <div className="item-container-card">
+            <ul className=" space">
+              {searchList.map(each => (
+                <AppItem details={each} key={each.appId} />
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     )
   }
