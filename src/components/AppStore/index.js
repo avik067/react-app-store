@@ -337,7 +337,7 @@ class AppStore extends Component {
           <li>
             <h1>App Store</h1>
 
-            <li>
+            <li className="row">
               <input type="search" onChange={this.search} />
               <img
                 className="search-icon"
